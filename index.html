@@ -2,18 +2,215 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <title>采购流程 V5 Demo</title>
+  <title>全屋定制 ERP 管理系统方案</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <style>body{margin:0;padding:0;background:#f9fafb;}</style>
+  <style>
+    body { margin: 0; padding: 0; background: #f8fafc; }
+  </style>
 </head>
-<body>
-  <div id="root"></div>
-  <script type="text/babel">
-// NOTE: In actual packaging, replace below with full canvas code from ChatGPT canvas
-console.log("采购流程 V5 Demo placeholder loaded");
-  </script>
+<body class="text-slate-800">
+  <header class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white">
+    <div class="max-w-6xl mx-auto px-6 py-14">
+      <div class="flex flex-col gap-6">
+        <div class="inline-flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-slate-300">
+          <span class="w-10 h-[2px] bg-slate-500"></span>
+          全屋定制 ERP 管理系统方案
+        </div>
+        <h1 class="text-3xl md:text-5xl font-semibold leading-tight">
+          打造全流程数字化中台，连接客户、商机、交付与财务
+        </h1>
+        <p class="text-base md:text-lg text-slate-200 max-w-3xl">
+          覆盖客户管理、公海导入、商机 SOP、产品配置、订单与合同、
+          财务费用、项目交付与售后，全屋定制业务一体化协同。
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <span class="px-3 py-1 rounded-full bg-white/10 border border-white/20 text-sm">客户管理</span>
+          <span class="px-3 py-1 rounded-full bg-white/10 border border-white/20 text-sm">商机 SOP</span>
+          <span class="px-3 py-1 rounded-full bg-white/10 border border-white/20 text-sm">产品配置</span>
+          <span class="px-3 py-1 rounded-full bg-white/10 border border-white/20 text-sm">合同与回款</span>
+          <span class="px-3 py-1 rounded-full bg-white/10 border border-white/20 text-sm">交付售后</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="max-w-6xl mx-auto px-6 py-12">
+    <div class="grid md:grid-cols-4 gap-6">
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+        <p class="text-sm text-slate-500">线索转化率</p>
+        <p class="text-2xl font-semibold mt-2">+18%</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+        <p class="text-sm text-slate-500">工单响应</p>
+        <p class="text-2xl font-semibold mt-2">&lt; 2h</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+        <p class="text-sm text-slate-500">交付准时率</p>
+        <p class="text-2xl font-semibold mt-2">95%</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+        <p class="text-sm text-slate-500">回款周期</p>
+        <p class="text-2xl font-semibold mt-2">缩短 22%</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-6 pb-12">
+    <div class="grid lg:grid-cols-2 gap-6">
+      <div class="bg-white rounded-2xl p-7 shadow-sm border border-slate-100">
+        <h3 class="text-xl font-semibold">客户管理与客资引擎</h3>
+        <p class="mt-2 text-sm text-slate-600">统一客户档案、线索标签、触达记录与画像沉淀，支持公海池与多渠道导入。</p>
+        <ul class="mt-4 space-y-2 text-sm text-slate-700">
+          <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-indigo-500"></span>客户池分层：私海 / 公海 / 冷热客户</li>
+          <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-indigo-500"></span>公海导入：抖音、小红书、视频号 API 接入</li>
+          <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-indigo-500"></span>客户意向评分模型与分配策略</li>
+          <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-indigo-500"></span>线索触达 SLA 与跟进提醒</li>
+        </ul>
+      </div>
+      <div class="bg-white rounded-2xl p-7 shadow-sm border border-slate-100">
+        <h3 class="text-xl font-semibold">商机管理 + SOP 任务</h3>
+        <p class="mt-2 text-sm text-slate-600">建立多阶段商机流程，支撑自定义 SOP 任务与评分规则，确保成交可控。</p>
+        <ul class="mt-4 space-y-2 text-sm text-slate-700">
+          <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-indigo-500"></span>商机阶段：线索 → 量房 → 方案 → 报价 → 合同 → 交付</li>
+          <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-indigo-500"></span>SOP 任务库：可配置任务模板、触发条件</li>
+          <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-indigo-500"></span>任务评分规则：完成度 / 时效 / 价值贡献</li>
+          <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-indigo-500"></span>漏斗分析与阶段转化看板</li>
+        </ul>
+      </div>
+      <div class="bg-white rounded-2xl p-7 shadow-sm border border-slate-100">
+        <h3 class="text-xl font-semibold">产品与供应链管理</h3>
+        <p class="mt-2 text-sm text-slate-600">SKU 与多规格组合管理，打通供应商、采购、交付全过程。</p>
+        <ul class="mt-4 space-y-2 text-sm text-slate-700">
+          <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-indigo-500"></span>产品中心：SKU、系列、规格、材质、颜色维度</li>
+          <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-indigo-500"></span>多规格管理：BOM 关联、替代料配置</li>
+          <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-indigo-500"></span>供应商档案与评级、价格体系</li>
+          <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-indigo-500"></span>采购计划与到货追踪</li>
+        </ul>
+      </div>
+      <div class="bg-white rounded-2xl p-7 shadow-sm border border-slate-100">
+        <h3 class="text-xl font-semibold">订单与合同管理</h3>
+        <p class="mt-2 text-sm text-slate-600">配置器 + 子 BOM 方案生成订单，合同在线签署并管理款项节点。</p>
+        <ul class="mt-4 space-y-2 text-sm text-slate-700">
+          <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-indigo-500"></span>产品配置器：房型/空间维度配置</li>
+          <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-indigo-500"></span>子 BOM 关联与报价拆分</li>
+          <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-indigo-500"></span>订单暂存与批量加入</li>
+          <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-indigo-500"></span>法大大电子合同对接 + 款项节点管理</li>
+        </ul>
+      </div>
+      <div class="bg-white rounded-2xl p-7 shadow-sm border border-slate-100">
+        <h3 class="text-xl font-semibold">财务与费用中心</h3>
+        <p class="mt-2 text-sm text-slate-600">应收应付、费用报销、采购支出统一闭环，保障资金透明。</p>
+        <ul class="mt-4 space-y-2 text-sm text-slate-700">
+          <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-indigo-500"></span>应收应付看板与对账</li>
+          <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-indigo-500"></span>费用中心：报销、采购、运营费用</li>
+          <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-indigo-500"></span>多维度成本归集：订单/项目/部门</li>
+          <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-indigo-500"></span>利润与毛利分析</li>
+        </ul>
+      </div>
+      <div class="bg-white rounded-2xl p-7 shadow-sm border border-slate-100">
+        <h3 class="text-xl font-semibold">项目交付与售后</h3>
+        <p class="mt-2 text-sm text-slate-600">项目阶段交付、现场管理、售后工单闭环追踪。</p>
+        <ul class="mt-4 space-y-2 text-sm text-slate-700">
+          <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-indigo-500"></span>交付计划：进度、里程碑、验收</li>
+          <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-indigo-500"></span>现场施工协同与材料进场</li>
+          <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-indigo-500"></span>售后工单：质保、维修、回访</li>
+          <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-indigo-500"></span>工单 SLA + 服务评分</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-slate-900 text-white">
+    <div class="max-w-6xl mx-auto px-6 py-12">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div>
+          <h2 class="text-2xl font-semibold">技术架构建议</h2>
+          <p class="text-slate-300 mt-2 max-w-2xl text-sm">
+            前后端解耦，微服务与轻量服务混合架构，满足快速扩展与多渠道集成。
+          </p>
+        </div>
+        <button class="px-5 py-2 rounded-full bg-white text-slate-900 text-sm font-medium">架构评审</button>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6 mt-8">
+        <div class="bg-white/10 rounded-2xl p-6 border border-white/10">
+          <h3 class="text-lg font-semibold">前端</h3>
+          <ul class="mt-3 space-y-2 text-sm text-slate-200">
+            <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>React + Vite</li>
+            <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>Tailwind UI 组件库</li>
+            <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>状态管理：Redux/Pinia 可选</li>
+            <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>多端适配：PC + 移动</li>
+          </ul>
+        </div>
+        <div class="bg-white/10 rounded-2xl p-6 border border-white/10">
+          <h3 class="text-lg font-semibold">后端</h3>
+          <ul class="mt-3 space-y-2 text-sm text-slate-200">
+            <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>Java Spring Boot 业务中台</li>
+            <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>Python FastAPI 轻量服务</li>
+            <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>API Gateway + OAuth2</li>
+            <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>微服务/模块化可扩展</li>
+          </ul>
+        </div>
+        <div class="bg-white/10 rounded-2xl p-6 border border-white/10">
+          <h3 class="text-lg font-semibold">数据</h3>
+          <ul class="mt-3 space-y-2 text-sm text-slate-200">
+            <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>PostgreSQL 主库</li>
+            <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>Redis 缓存与队列</li>
+            <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>对象存储：合同/附件</li>
+            <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>BI 报表与数据仓库</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-6 py-12">
+    <div class="grid lg:grid-cols-3 gap-6">
+      <div class="lg:col-span-2 bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
+        <h3 class="text-xl font-semibold">权限与绩效</h3>
+        <p class="mt-2 text-sm text-slate-600">角色驱动权限控制，结合 KPI 模型与多维绩效考核，支持员工成长与激励。</p>
+        <div class="grid md:grid-cols-2 gap-4 mt-6 text-sm text-slate-700">
+          <div class="rounded-xl border border-slate-100 p-4">
+            <h4 class="font-medium">员工管理</h4>
+            <p class="mt-2 text-slate-500">组织架构、岗位权限、目标拆解</p>
+          </div>
+          <div class="rounded-xl border border-slate-100 p-4">
+            <h4 class="font-medium">绩效管理</h4>
+            <p class="mt-2 text-slate-500">目标管理、过程指标、奖惩规则</p>
+          </div>
+          <div class="rounded-xl border border-slate-100 p-4">
+            <h4 class="font-medium">数据安全</h4>
+            <p class="mt-2 text-slate-500">分级授权、日志审计、敏感数据脱敏</p>
+          </div>
+          <div class="rounded-xl border border-slate-100 p-4">
+            <h4 class="font-medium">流程治理</h4>
+            <p class="mt-2 text-slate-500">审批流配置、提醒与异常预警</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+        <h4 class="text-lg font-semibold">交付节奏</h4>
+        <ol class="mt-4 space-y-3 text-sm text-slate-600">
+          <li>1. 需求调研与业务流程梳理</li>
+          <li>2. MVP 模块落地（客户 + 商机 + 订单）</li>
+          <li>3. 财务与交付模块上线</li>
+          <li>4. 数据智能与 BI 分析迭代</li>
+        </ol>
+        <button class="mt-6 w-full px-4 py-2 rounded-lg bg-slate-900 text-white text-sm">生成里程碑计划</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div>
+        <p class="text-sm text-slate-500">全屋定制 ERP 管理系统 · 方案概览</p>
+        <p class="text-xs text-slate-400">支持多渠道客资、项目交付与全链路财务闭环</p>
+      </div>
+      <div class="flex gap-3 text-xs text-slate-500">
+        <span>版本：V1.0</span>
+        <span>负责人：产品/技术协同</span>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
