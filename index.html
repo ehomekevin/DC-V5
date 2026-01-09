@@ -2,18 +2,389 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <title>采购流程 V5 Demo</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <style>body{margin:0;padding:0;background:#f9fafb;}</style>
+  <title>全屋定制 ERP 管理系统方案</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --brand: #4338ca;
+      --brand-2: #0f172a;
+      --accent: #16a34a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    header {
+      background: linear-gradient(120deg, #0f172a, #1e293b, #0f172a);
+      color: #fff;
+      padding: 72px 0;
+    }
+    header h1 {
+      font-size: 36px;
+      line-height: 1.3;
+      margin: 16px 0;
+    }
+    header p {
+      color: #e2e8f0;
+      max-width: 720px;
+      margin: 0 0 20px;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 12px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #cbd5f5;
+    }
+    .eyebrow span {
+      width: 40px;
+      height: 2px;
+      background: #64748b;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .tag {
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+    }
+    section {
+      padding: 48px 0;
+    }
+    .grid {
+      display: grid;
+      gap: 20px;
+    }
+    .grid-4 {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .grid-2 {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .grid-3 {
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+    }
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 20px;
+    }
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .metric {
+      font-size: 22px;
+      font-weight: 600;
+      margin-top: 8px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0 0;
+      display: grid;
+      gap: 10px;
+      font-size: 14px;
+      color: #1e293b;
+    }
+    ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--brand);
+      margin-top: 6px;
+      flex: 0 0 auto;
+    }
+    .section-dark {
+      background: #0f172a;
+      color: #fff;
+    }
+    .section-dark p {
+      color: #cbd5f5;
+    }
+    .dark-card {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: none;
+    }
+    .dark-card h3 {
+      color: #fff;
+    }
+    .dark-card ul {
+      color: #e2e8f0;
+    }
+    .dot-accent {
+      background: var(--accent);
+    }
+    .split {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+    }
+    .outline {
+      background: #f1f5f9;
+      border-radius: 18px;
+      padding: 20px;
+      border: 1px solid var(--border);
+    }
+    .outline h4 {
+      margin-top: 0;
+    }
+    .callout {
+      margin-top: 20px;
+      padding: 16px;
+      border-radius: 12px;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--muted);
+      display: grid;
+      gap: 8px;
+    }
+    .callout span {
+      font-weight: 600;
+      color: var(--text);
+    }
+    footer {
+      border-top: 1px solid var(--border);
+      background: #fff;
+      padding: 32px 0;
+    }
+    footer p {
+      margin: 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    @media (max-width: 900px) {
+      header h1 { font-size: 30px; }
+      .split { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
-  <div id="root"></div>
-  <script type="text/babel">
-// NOTE: In actual packaging, replace below with full canvas code from ChatGPT canvas
-console.log("采购流程 V5 Demo placeholder loaded");
-  </script>
+  <header>
+    <div class="container">
+      <div class="eyebrow"><span></span>全屋定制 ERP 管理系统方案</div>
+      <h1>端到端可部署架构：前端 React + Vite，后端 Spring Boot + Django + Python 服务</h1>
+      <p>覆盖客户管理、公海导入、商机 SOP、产品配置、订单与合同、财务费用、项目交付与售后，提供完整的软件结构与部署路径。</p>
+      <div class="tags">
+        <span class="tag">客户管理</span>
+        <span class="tag">商机 SOP</span>
+        <span class="tag">产品配置</span>
+        <span class="tag">合同与回款</span>
+        <span class="tag">交付售后</span>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container grid grid-4">
+      <div class="card">
+        <p>线索转化率</p>
+        <div class="metric">+18%</div>
+      </div>
+      <div class="card">
+        <p>工单响应</p>
+        <div class="metric">&lt; 2h</div>
+      </div>
+      <div class="card">
+        <p>交付准时率</p>
+        <div class="metric">95%</div>
+      </div>
+      <div class="card">
+        <p>回款周期</p>
+        <div class="metric">缩短 22%</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container grid grid-2">
+      <div class="card">
+        <h3>客户管理与客资引擎</h3>
+        <p>统一客户档案、线索标签、触达记录与画像沉淀，支持公海池与多渠道导入。</p>
+        <ul>
+          <li><span class="dot"></span>客户池分层：私海 / 公海 / 冷热客户</li>
+          <li><span class="dot"></span>公海导入：抖音、小红书、视频号 API 接入</li>
+          <li><span class="dot"></span>客户意向评分模型与分配策略</li>
+          <li><span class="dot"></span>线索触达 SLA 与跟进提醒</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>商机管理 + SOP 任务</h3>
+        <p>建立多阶段商机流程，支撑自定义 SOP 任务与评分规则，确保成交可控。</p>
+        <ul>
+          <li><span class="dot"></span>商机阶段：线索 → 量房 → 方案 → 报价 → 合同 → 交付</li>
+          <li><span class="dot"></span>SOP 任务库：可配置任务模板、触发条件</li>
+          <li><span class="dot"></span>任务评分规则：完成度 / 时效 / 价值贡献</li>
+          <li><span class="dot"></span>漏斗分析与阶段转化看板</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>产品与供应链管理</h3>
+        <p>SKU 与多规格组合管理，打通供应商、采购、交付全过程。</p>
+        <ul>
+          <li><span class="dot"></span>产品中心：SKU、系列、规格、材质、颜色维度</li>
+          <li><span class="dot"></span>多规格管理：BOM 关联、替代料配置</li>
+          <li><span class="dot"></span>供应商档案与评级、价格体系</li>
+          <li><span class="dot"></span>采购计划与到货追踪</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>订单与合同管理</h3>
+        <p>配置器 + 子 BOM 方案生成订单，合同在线签署并管理款项节点。</p>
+        <ul>
+          <li><span class="dot"></span>产品配置器：房型/空间维度配置</li>
+          <li><span class="dot"></span>子 BOM 关联与报价拆分</li>
+          <li><span class="dot"></span>订单暂存与批量加入</li>
+          <li><span class="dot"></span>法大大电子合同对接 + 款项节点管理</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>财务与费用中心</h3>
+        <p>应收应付、费用报销、采购支出统一闭环，保障资金透明。</p>
+        <ul>
+          <li><span class="dot"></span>应收应付看板与对账</li>
+          <li><span class="dot"></span>费用中心：报销、采购、运营费用</li>
+          <li><span class="dot"></span>多维度成本归集：订单/项目/部门</li>
+          <li><span class="dot"></span>利润与毛利分析</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>项目交付与售后</h3>
+        <p>项目阶段交付、现场管理、售后工单闭环追踪。</p>
+        <ul>
+          <li><span class="dot"></span>交付计划：进度、里程碑、验收</li>
+          <li><span class="dot"></span>现场施工协同与材料进场</li>
+          <li><span class="dot"></span>售后工单：质保、维修、回访</li>
+          <li><span class="dot"></span>工单 SLA + 服务评分</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-dark">
+    <div class="container">
+      <div class="grid" style="gap: 12px;">
+        <h2 style="margin:0; font-size: 26px;">完整软件结构</h2>
+        <p>支持可部署的前后端分离架构，结合 Spring Boot + Django + Python 服务与 PostgreSQL 数据库。</p>
+      </div>
+      <div class="grid grid-3" style="margin-top: 24px;">
+        <div class="card dark-card">
+          <h3>前端（React + Vite）</h3>
+          <ul>
+            <li><span class="dot dot-accent"></span>应用层：ERP 控制台、移动端应用</li>
+            <li><span class="dot dot-accent"></span>组件层：设计系统与可复用表单</li>
+            <li><span class="dot dot-accent"></span>数据层：React Query + 状态管理</li>
+            <li><span class="dot dot-accent"></span>路由：多角色工作台与权限隔离</li>
+          </ul>
+        </div>
+        <div class="card dark-card">
+          <h3>后端（Spring Boot + Django + Python）</h3>
+          <ul>
+            <li><span class="dot dot-accent"></span>Spring Boot：主业务中台、订单/合同/财务</li>
+            <li><span class="dot dot-accent"></span>Django：配置中心、权限与流程引擎</li>
+            <li><span class="dot dot-accent"></span>Python 服务：AI 评分、报表与集成</li>
+            <li><span class="dot dot-accent"></span>API 网关：OAuth2 / JWT / 多租户</li>
+          </ul>
+        </div>
+        <div class="card dark-card">
+          <h3>数据层</h3>
+          <ul>
+            <li><span class="dot dot-accent"></span>PostgreSQL：主库 + 报表库</li>
+            <li><span class="dot dot-accent"></span>Redis：缓存、队列、分布式锁</li>
+            <li><span class="dot dot-accent"></span>对象存储：合同/附件/配置器素材</li>
+            <li><span class="dot dot-accent"></span>BI：经营看板与预测分析</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container split">
+      <div class="card">
+        <h3>部署结构（可落地）</h3>
+        <p>按环境拆分部署，保障前后端与数据可扩展。</p>
+        <div class="grid grid-2" style="margin-top: 16px;">
+          <div class="outline">
+            <h4>Web 应用</h4>
+            <p>React + Vite 打包静态资源 → Nginx / 对象存储。</p>
+          </div>
+          <div class="outline">
+            <h4>业务 API</h4>
+            <p>Spring Boot 服务集群 + 服务注册与网关。</p>
+          </div>
+          <div class="outline">
+            <h4>配置与流程</h4>
+            <p>Django 管理后台 + 权限与流程引擎。</p>
+          </div>
+          <div class="outline">
+            <h4>数据与缓存</h4>
+            <p>PostgreSQL + Redis 高可用部署。</p>
+          </div>
+        </div>
+        <div class="callout">
+          <div><span>Deploy</span> Docker Compose / K8s：前端静态资源、后端服务、数据库与缓存。</div>
+          <div><span>Observability</span> 日志中心、APM、告警服务统一纳管。</div>
+        </div>
+      </div>
+      <div class="outline">
+        <h4>交付节奏</h4>
+        <ol style="padding-left: 18px; color: var(--muted); font-size: 14px;">
+          <li>需求调研与业务流程梳理</li>
+          <li>MVP 模块落地（客户 + 商机 + 订单）</li>
+          <li>财务与交付模块上线</li>
+          <li>数据智能与 BI 分析迭代</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center;">
+      <div>
+        <p>全屋定制 ERP 管理系统 · 方案概览</p>
+        <p>支持多渠道客资、项目交付与全链路财务闭环</p>
+      </div>
+      <div style="display:flex; gap: 12px; font-size: 12px; color: var(--muted);">
+        <span>版本：V1.2</span>
+        <span>负责人：产品/技术协同</span>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
